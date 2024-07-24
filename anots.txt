@@ -1,6 +1,3 @@
-
-
-
 o que é json?
 
 javascript object notation
@@ -21,3 +18,95 @@ obs: ha ainda muitos serviços que utilizam o xml, por exemplo, quando estamos t
     exemplo: nota fiscal eletronica.
     contudo, quando as informações são menos extensas, quanto a transferencia de dados via soap, o xml passa 
     a ser uma alternativa secundaria se comparado ao json. por exemplo quando estamos falando em rest. 
+
+
+------------------------------------------------------------
+subindo git
+
+    parou a aplicação
+    voltou para a pasta raiz do projeto - PROEVENTOS
+
+    dotnet new 
+        lista a opções para new
+
+    dotnet new gitignore
+        cria o arquivo gitignore no diretorio atual(raiz) já com as configurações relacionadas ao dotnet
+
+    github
+        criação de um novo repositório para subir nosso projeto 
+        
+    sequencia de comandos para subir o projeto para o github //lembrando que as configurações da minha máquina com o github já estavam ok
+        git init 
+        git add .
+        git commit -m "descrição desse commit"
+        git branch -M main
+        git remote add origin git@github.com:jspasqual/ProEventos.git  //de acordo com o repositorio que criamos no github
+        git push -u origin main
+
+
+------------------------------------------------------------
+ef core intro 
+
+    referencias ao entity framework core 
+        o que é 
+        pq temos que fazer as referencias / a partir de qual versão 
+
+    criaremos as migrations 
+
+    criação do banco de dados 
+        sqlite
+        db browser for sql - utilização desse cara com nosso banco de dados 
+
+    criação do contexto dentro do diretorio data 
+
+    ------------------------------------------------------------
+    instalando ef core - entity framework core (ferramenta)
+        mapeamento de banco de dados relacionais para objetos 
+
+        desde o .net3 não vem mais com  entity framework instalado 
+        ou seja, não considera mais entity framework como parte do framework
+        ela é uma ferramenta associada ao framework
+        então nos temos o .net5 e o entity framework core 5
+
+        dotnet tool list --global 
+            lista as ferramentas para o .net que temos instaladas 
+
+        dotnet tool install --global dotnet-ef
+            comando para instalação do entity framework core
+
+            obs: como a versão do curso é uma versão antiga, utilizei o comando abaixo 
+             dotnet tool install --global dotnet-ef --version 5.0.2
+
+        dotnet-ef 
+            lista opções do efCore
+
+    ------------------------------------------------------------
+    instalando as referencias do entity framework core (NuGet)
+
+        - agora que já fizemos a instalação da ferramenta efCore, precisamos fazer a referencia 
+        do nosso projeto para utilização do efCore.
+
+        ProEventos.API.csproj
+            arquivo do projeto onde ficam as referencias
+
+            - para isso, vamos usar a extensão do vscode que instalamos: NuGet Gallery 
+
+            ctrl_shift_p-NuGetOpenNuGetGallery
+
+            pesquisar por entity framework core
+                selecionar nosso projeto e instalar: entity framework core - 5.0.2
+
+            pesquisar por entity framework core
+                selecionar nosso projeto e instalar: entity framework core design - 5.0.2
+
+            pesquisar por entity framework core
+                selecionar nosso projeto e instalar: entity framework core tools - 5.0.2
+
+            pesquisar por entity framework core sqlite
+                selecionar nosso projeto e instalar: entity framework core sqlite - 5.0.2
+
+            
+        
+        
+
+

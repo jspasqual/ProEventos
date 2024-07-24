@@ -12,6 +12,9 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 
+using ProEventos.API.data;
+using Microsoft.EntityFrameworkCore;
+
 namespace ProEventos.API
 {
     public class Startup
@@ -26,6 +29,12 @@ namespace ProEventos.API
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+
+            services.AddDbContext<DataContext>(
+                //parametro que está sendo esperado lá no DataContext
+
+                context => context.UseSqlite(Configuration.GetConnectionString("Default"))
+            );
 
             services.AddControllers();
             services.AddSwaggerGen(c =>
