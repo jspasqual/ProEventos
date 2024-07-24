@@ -1,0 +1,23 @@
+
+
+
+o que é json?
+
+javascript object notation
+
+- regras para armazenamento e troca de informações em texto
+
+- é mais rápido e mais facil alem de ser menor do que xml para realizar o parse(conversão) para outras linguagens.
+
+- é um formato mais leve na troca de dados 
+
+- apesar de utilizar a sintaxe do js para descrever objetos e dados é indenpendente de linguagem e plataforma
+
+- parsers e libs json existem para diversas linguagens como: c# vb java c++ ruby python... 
+
+
+obs: ha ainda muitos serviços que utilizam o xml, por exemplo, quando estamos trabalhando com web services.
+    os webservices continuam utilizando o xml, por exemplo para troca de informações de coisas muito grandes, 
+    exemplo: nota fiscal eletronica.
+    contudo, quando as informações são menos extensas, quanto a transferencia de dados via soap, o xml passa 
+    a ser uma alternativa secundaria se comparado ao json. por exemplo quando estamos falando em rest. 
